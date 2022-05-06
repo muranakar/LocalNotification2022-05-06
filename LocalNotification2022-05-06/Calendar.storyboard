@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8nt-l7-XBq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calender View Controller-->
+        <scene sceneID="L53-cB-cjk">
+            <objects>
+                <viewController id="8nt-l7-XBq" customClass="CalenderViewController" customModule="LocalNotification2022_05_06" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CE7-j1-ON4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5m-Us-RUV">
+                                <rect key="frame" x="107" y="265" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Baa-bC-kXI"/>
+                                    <constraint firstAttribute="height" constant="150" id="FLP-Uq-F6R"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="gray" title="下記の日時で通知する"/>
+                                <connections>
+                                    <action selector="tapNotificationButton:" destination="8nt-l7-XBq" eventType="touchUpInside" id="dhO-r5-XSk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カレンダーに通知" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5S-rt-zq7">
+                                <rect key="frame" x="137.5" y="144" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-uB-t7O">
+                                <rect key="frame" x="0.0" y="435" width="414" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AX7-HI-C6m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E6I-uB-t7O" firstAttribute="trailing" secondItem="AX7-HI-C6m" secondAttribute="trailing" id="54K-wx-qaL"/>
+                            <constraint firstItem="R5S-rt-zq7" firstAttribute="top" secondItem="AX7-HI-C6m" secondAttribute="top" constant="100" id="8mF-Tl-bP0"/>
+                            <constraint firstItem="F5m-Us-RUV" firstAttribute="top" secondItem="R5S-rt-zq7" secondAttribute="bottom" constant="100" id="8pL-Zt-eax"/>
+                            <constraint firstItem="F5m-Us-RUV" firstAttribute="centerX" secondItem="CE7-j1-ON4" secondAttribute="centerX" id="TFf-W6-PAy"/>
+                            <constraint firstItem="R5S-rt-zq7" firstAttribute="centerX" secondItem="CE7-j1-ON4" secondAttribute="centerX" id="bpt-lJ-grZ"/>
+                            <constraint firstItem="E6I-uB-t7O" firstAttribute="leading" secondItem="AX7-HI-C6m" secondAttribute="leading" id="gch-TX-5rS"/>
+                            <constraint firstItem="E6I-uB-t7O" firstAttribute="top" secondItem="F5m-Us-RUV" secondAttribute="bottom" constant="20" id="hJ0-bM-Itg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notificationDatePicker" destination="E6I-uB-t7O" id="Cmo-1R-aFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0he-Zf-8ID" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
